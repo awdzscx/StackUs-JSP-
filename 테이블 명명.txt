@@ -1,81 +1,69 @@
 MEMBER  (학생)
-	TYPE	(회원타입,3)			NN
-	MEM_NO		(회원번호)
-	MEM_ID		(회원아이디)
-	MEM_PW		(비밀번호)
-	MEM_NAME	(회원이름)
-	MEM_BIRTH	(생년월일)
-	MEM_EMAIL	(이메일)
-	MEM_TEL		(전화번호)
-	MEM_LICENSE1	(취득자격증1)
-	MEM_LICENSE2	(취득자격증2)
-	MEM_LICENSE3	(취득자격증3)
-	MEM_LICENSE4	(취득자격증4)
-	MEM_LICENSE5	(취득자격증5)
-	MEM_CLASS	(소속교실)
-	MEM_IMAGE	(프로필사진)
-	MEM_CONTENT	(프로필소개말)
+	MEM_TYPE	(회원타입,3)  
+	MEM_NO		-(회원번호)	PK
+	MEM_ID		-(회원아이디)  	PK
+	MEM_PW		-(비밀번호)
+	MEM_NAME	-(회원이름)
+	MEM_BIRTH	-(생년월일)
+	MEM_EMAIL	-(이메일)
+	MEM_TEL		-(전화번호)
+	MEM_LICENSE	-(취득자격증)
+	MEM_CLASS	-(소속교실)
+	MEM_IMAGE	-(프로필사진)
+	MEM_CONTENT	-(프로필소개말)
+	
 
-MANAGE (관리자)
+MANAGER (관리자)
 	TYPE (회원타입,1)
-	MAN_ID 
-	MAN_PW
+	MAN_ID --관리자 아이디	PK
+	MAN_PW --관리자 비밀번호
 
 
 TEACHER (선생님)
 	TYPE (회원타입, 2)
-	TEA_ID
-	TEA_PW
-	TEA_NAME
-	TEA_BIRTH
-	TEA_EMAIL
-	TEA_TEL
-	TEA_IMAGE
-	TEA_CLASS1		(개설한 교실)
-	TEA_CLASS2	
-	TEA_CLASS3
-	TEA_MAJOR		(전공과목)
-	TEA_QUESTION		(올린문제)
+	TEA_ID --선생님 아이디	PK
+	TEA_NO --선생님 번호
+	TEA_PW --선생님 비밀번호
+	TEA_NAME --선생님 이름
+	TEA_BIRTH --선생님 생일
+	TEA_EMAIL --선생님 이메일
+	TEA_TEL --선생님 전화번호
+	TEA_IMAGE --선생님 프로필 사진
+	TEA_CLASS -(개설한 교실)
+	TEA_MAJOR	-(전공과목)
 
-CLASS (교실)
-	CLA_NO
-	CLA_TEACHER
-	CLA_NAME
-	CLA_INTRO
 	
 
-QUESTION
-	CLA_NO
-	Q_NO
-	Q_CORRECT
-	Q_INCORRECT
-	Q_QUESTION
-	Q_ANSWER
+CLASS (교실)
+	CLA_NO  --교실 번호	PK
+	CLA_NAME  --교실 이름
+	CLA_INTRO  --교실 설명
+	
+
+QUESTION (직접 문제 테이블)
+	Q_NO  -- 문제 번호
+	Q_CORRECT  --문제 정답수
+	Q_INCORRECT  --문제 오답수
+	Q_QUESTION  -- 직접 문제
+	Q_ANSWER  -- 문제 해설
+	Q_RIGHT  -- 문제 정답
 
 EXAM
 	EX_TYPE		(시험타입 종류에따라)
-	EX_NO		(시험번호 1,2,3,)
-	EX_CORRECT
-	EX_INCORRECT
-	EX_QUESTION
-	EX_ANSWER
+	EX_NO		(시험번호 1,2,3)
+	EX_CORRECT	--기출 정답수
+	EX_INCORRECT	--기출 오답수
+	EX_QUESTION	--기출 문제
+	EX_ANSWER	--기출 해설
+	EX_RIGHT		--기출 정답
 	
 BOARD
-	BO_NO
-	BO_WRITER
-	BO_TITLE
-	BO_CONTENT
-	BO_DATE
-	BO_HIT
-	BO_REF
-	BO_STEP
-	BO_LEVEL
-	BO_FNAME
-	BO_FSIZE
-	BO_RFNAME
-	BO_PAGESIZE
-	BO_PAGENUM	
-	BO_PAGESUM
+	BO_NO -- 게시판 번호
+	BO_TITLE -- 게시판 제목
+	BO_CONTENT -- 게시판 내용
+	BO_DATE  --게시판 생성일자
+	BO_HIT -- 게시판 조회수
+	
 	
 
 	
