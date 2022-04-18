@@ -1,5 +1,5 @@
 create user test1 identified by 1234;
 
-grant connect, resourse, dba to test1;
+grant connect, resource, dba to test1;
 
 ddl파일 불러넣기 => f5 
