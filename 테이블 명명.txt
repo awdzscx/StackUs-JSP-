@@ -1,0 +1,87 @@
+MEMBER  (학생)
+	TYPE	(회원타입,3)			NN
+	MEM_NO		(회원번호)
+	MEM_ID		(회원아이디)
+	MEM_PW		(비밀번호)
+	MEM_NAME	(회원이름)
+	MEM_BIRTH	(생년월일)
+	MEM_EMAIL	(이메일)
+	MEM_TEL		(전화번호)
+	MEM_LICENSE1	(취득자격증1)
+	MEM_LICENSE2	(취득자격증2)
+	MEM_LICENSE3	(취득자격증3)
+	MEM_LICENSE4	(취득자격증4)
+	MEM_LICENSE5	(취득자격증5)
+	MEM_CLASS	(소속교실)
+	MEM_IMAGE	(프로필사진)
+	MEM_CONTENT	(프로필소개말)
+
+MANAGE (관리자)
+	TYPE (회원타입,1)
+	MAN_ID 
+	MAN_PW
+
+
+TEACHER (선생님)
+	TYPE (회원타입, 2)
+	TEA_ID
+	TEA_PW
+	TEA_NAME
+	TEA_BIRTH
+	TEA_EMAIL
+	TEA_TEL
+	TEA_IMAGE
+	TEA_CLASS1		(개설한 교실)
+	TEA_CLASS2	
+	TEA_CLASS3
+	TEA_MAJOR		(전공과목)
+	TEA_QUESTION		(올린문제)
+
+CLASS (교실)
+	CLA_NO
+	CLA_TEACHER
+	CLA_NAME
+	CLA_INTRO
+	
+
+QUESTION
+	CLA_NO
+	Q_NO
+	Q_CORRECT
+	Q_INCORRECT
+	Q_QUESTION
+	Q_ANSWER
+
+EXAM
+	EX_TYPE		(시험타입 종류에따라)
+	EX_NO		(시험번호 1,2,3,)
+	EX_CORRECT
+	EX_INCORRECT
+	EX_QUESTION
+	EX_ANSWER
+	
+BOARD
+	BO_NO
+	BO_WRITER
+	BO_TITLE
+	BO_CONTENT
+	BO_DATE
+	BO_HIT
+	BO_REF
+	BO_STEP
+	BO_LEVEL
+	BO_FNAME
+	BO_FSIZE
+	BO_RFNAME
+	BO_PAGESIZE
+	BO_PAGENUM	
+	BO_PAGESUM
+	
+
+	
+
+
+
+	
+   	
+	
