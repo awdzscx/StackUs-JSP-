@@ -1,5 +1,5 @@
 -- 생성자 Oracle SQL Developer Data Modeler 21.4.1.349.1605
---   위치:        2022-04-18 11:44:50 KST
+--   위치:        2022-04-19 12:01:39 KST
 --   사이트:      Oracle Database 11g
 --   유형:      Oracle Database 11g
 
@@ -29,11 +29,11 @@ CREATE TABLE class (
 ALTER TABLE class ADD CONSTRAINT class_pk PRIMARY KEY ( cla_no );
 
 CREATE TABLE exam (
-    ex_type      NUMBER(5),
+    ex_type      VARCHAR2(1000),
     ex_no        NUMBER(5),
     ex_correct   NUMBER(5),
     ex_incorrect NUMBER(5),
-    ex_question  BLOB,
+    ex_question  VARCHAR2(1000),
     ex_answer    VARCHAR2(1000),
     ex_right     NUMBER(5)
 );
@@ -69,7 +69,7 @@ CREATE TABLE question (
     q_no         NUMBER(5),
     q_correct    NUMBER(5),
     q_incorrect  NUMBER(5),
-    q_question   BLOB,
+    q_question   VARCHAR2(1000),
     q_answer     VARCHAR2(1000),
     q_right      NUMBER(5),
     class_cla_no NUMBER(5) NOT NULL
