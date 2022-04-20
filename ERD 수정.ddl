@@ -1,5 +1,5 @@
 -- 생성자 Oracle SQL Developer Data Modeler 21.4.1.349.1605
---   위치:        2022-04-20 09:36:45 KST
+--   위치:        2022-04-20 10:17:19 KST
 --   사이트:      Oracle Database 11g
 --   유형:      Oracle Database 11g
 
@@ -32,7 +32,7 @@ LOGGING;
 
 ALTER TABLE class ADD CONSTRAINT class_pk PRIMARY KEY ( cla_no );
 
-CREATE TABLE "COMMENT" (
+CREATE TABLE comments (
     co_nom        NUMBER(5) NOT NULL,
     co_content    VARCHAR2(300) NOT NULL,
     co_date       DATE,
@@ -41,7 +41,7 @@ CREATE TABLE "COMMENT" (
 )
 LOGGING;
 
-ALTER TABLE "COMMENT" ADD CONSTRAINT comment_pk PRIMARY KEY ( co_nom );
+ALTER TABLE comments ADD CONSTRAINT comment_pk PRIMARY KEY ( co_nom );
 
 CREATE TABLE exam (
     ex_type      VARCHAR2(1000),
@@ -120,12 +120,12 @@ ALTER TABLE class
         REFERENCES teacher ( tea_id )
     NOT DEFERRABLE;
 
-ALTER TABLE "COMMENT"
+ALTER TABLE comments
     ADD CONSTRAINT comment_board_fk FOREIGN KEY ( board_bo_no )
         REFERENCES board ( bo_no )
     NOT DEFERRABLE;
 
-ALTER TABLE "COMMENT"
+ALTER TABLE comments
     ADD CONSTRAINT comment_member_fk FOREIGN KEY ( member_mem_id )
         REFERENCES member ( mem_id )
     NOT DEFERRABLE;
