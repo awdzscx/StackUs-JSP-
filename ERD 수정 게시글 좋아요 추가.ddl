@@ -1,5 +1,9 @@
 -- »ý¼ºÀÚ Oracle SQL Developer Data Modeler 21.4.1.349.1605
+<<<<<<< HEAD:ERD ìˆ˜ì • ê²Œì‹œê¸€ ì¢‹ì•„ìš” ì¶”ê°€.ddl
 --   À§Ä¡:        2022-04-20 11:41:30 KST
+=======
+--   À§Ä¡:        2022-04-20 11:39:55 KST
+>>>>>>> d02885fd3068f6e6d7de9c5165bd914a406cbce2:ERD ìˆ˜ì •.ddl
 --   »çÀÌÆ®:      Oracle Database 11g
 --   À¯Çü:      Oracle Database 11g
 
@@ -15,8 +19,7 @@ CREATE TABLE board (
     bo_title      VARCHAR2(20) NOT NULL,
     bo_no         NUMBER(5) NOT NULL,
     bo_hit        NUMBER(5),
-    member_mem_id VARCHAR2(20 BYTE) NOT NULL,
-    member_mem_no NUMBER NOT NULL
+    member_mem_id VARCHAR2(20 BYTE) NOT NULL
 )
 LOGGING;
 
@@ -72,7 +75,7 @@ ALTER TABLE manager ADD CONSTRAINT manager_pk PRIMARY KEY ( man_id );
 CREATE TABLE member (
     mem_id       VARCHAR2(20 BYTE) NOT NULL,
     mem_pw       VARCHAR2(20) NOT NULL,
-    mem_image    BLOB,
+    mem_image    VARCHAR2(100),
     mem_birth    DATE,
     mem_email    VARCHAR2(100 BYTE) NOT NULL,
     mem_content  VARCHAR2(100),
@@ -99,18 +102,17 @@ CREATE TABLE question (
 LOGGING;
 
 CREATE TABLE teacher (
-    type       NUMBER(5),
-    tea_no     NUMBER(5),
-    tea_id     VARCHAR2(20) NOT NULL,
-    tea_class  NUMBER(5),
-    tea_pw     VARCHAR2(20),
-    tea_major  VARCHAR2(20),
-    tea_name   VARCHAR2(20),
-    tea_birth  DATE,
-    tea_name_1 VARCHAR2(20),
-    tea_image  BLOB,
-    tea_email  VARCHAR2(20),
-    tea_tel    VARCHAR2(20)
+    type      NUMBER(5),
+    tea_no    NUMBER(5),
+    tea_id    VARCHAR2(20) NOT NULL,
+    tea_class NUMBER(5),
+    tea_pw    VARCHAR2(20),
+    tea_major VARCHAR2(20),
+    tea_name  VARCHAR2(20),
+    tea_birth DATE,
+    tea_image VARCHAR2(100),
+    tea_email VARCHAR2(20),
+    tea_tel   VARCHAR2(20)
 )
 LOGGING;
 
