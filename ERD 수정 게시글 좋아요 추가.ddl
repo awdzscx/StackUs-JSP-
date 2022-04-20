@@ -1,5 +1,5 @@
 -- 생성자 Oracle SQL Developer Data Modeler 21.4.1.349.1605
---   위치:        2022-04-20 10:17:19 KST
+--   위치:        2022-04-20 11:41:30 KST
 --   사이트:      Oracle Database 11g
 --   유형:      Oracle Database 11g
 
@@ -21,6 +21,12 @@ CREATE TABLE board (
 LOGGING;
 
 ALTER TABLE board ADD CONSTRAINT board_pk PRIMARY KEY ( bo_no );
+
+CREATE TABLE board_like (
+    board_bo_no   NUMBER(5) NOT NULL,
+    member_mem_id VARCHAR2(20 BYTE) NOT NULL
+)
+LOGGING;
 
 CREATE TABLE class (
     cla_no         NUMBER(5) NOT NULL,
@@ -110,6 +116,16 @@ LOGGING;
 
 ALTER TABLE teacher ADD CONSTRAINT tea_pk PRIMARY KEY ( tea_id );
 
+ALTER TABLE board_like
+    ADD CONSTRAINT board_like_fk FOREIGN KEY ( board_bo_no )
+        REFERENCES board ( bo_no )
+    NOT DEFERRABLE;
+
+ALTER TABLE board_like
+    ADD CONSTRAINT board_like_member_fk FOREIGN KEY ( member_mem_id )
+        REFERENCES member ( mem_id )
+    NOT DEFERRABLE;
+
 ALTER TABLE board
     ADD CONSTRAINT board_member_fk FOREIGN KEY ( member_mem_id )
         REFERENCES member ( mem_id )
@@ -144,9 +160,9 @@ ALTER TABLE question
 
 -- Oracle SQL Developer Data Modeler 요약 보고서: 
 -- 
--- CREATE TABLE                             8
+-- CREATE TABLE                             9
 -- CREATE INDEX                             0
--- ALTER TABLE                             12
+-- ALTER TABLE                             14
 -- CREATE VIEW                              0
 -- ALTER VIEW                               0
 -- CREATE PACKAGE                           0
