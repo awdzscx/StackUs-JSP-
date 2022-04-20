@@ -65,8 +65,10 @@ BOARD
 	BO_HIT -- 게시판 조회수
 	
 	
-
-	
+COMMENT (댓글)
+	CO_NO		--댓글 번호
+	CO_CONTENT	--댓글 내용
+	CO_DATE		--댓글 생성일자
 
 
 
