@@ -1,0 +1,101 @@
+@charset "EUC-KR";
+
+*{
+    margin: 0; 
+    padding: 0;
+}
+ 
+/* 화면에 너무 붙어 있어서...  */
+body{
+    padding: 30px;
+    background-color: white;
+}
+ 
+/* header 영역  */
+header{ 
+    padding: 5px;
+    text-align: center;
+}
+
+header input{
+    float: right;
+}
+
+header h4{float: right;}
+
+header a{text-decoration: none; color: #333333;}
+
+ 
+/* nav 영역 */
+nav{margin-top: 10px; margin-bottom: 30px;}
+ 
+nav ul{
+    list-style: none;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    text-align: center;
+}
+ 
+nav ul li{
+    display: inline;
+    letter-spacing: .5em;
+    margin-left: 3em;
+}
+ 
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    line-height: 3em;
+    text-transform: uppercase;
+}
+ 
+nav ul li a:hover{ text-decoration: underline;}
+ 
+aside#main{
+    float: left;
+}
+ 
+/* 가운데 본문 영역 */
+section#main{
+    float: left;
+    
+}
+ 
+/* 오른쪽 사이드 메뉴 */
+aside#right{
+    float: right;
+    padding: 0px;
+    width: 12em;
+}
+
+aside#right form{
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 8px;
+}
+ 
+aside#right #shopcart{
+    margin-bottom: 30px;
+}
+aside#right #login input{
+    margin-bottom: 7px;
+}
+ 
+/* footer영역 */
+footer{
+    clear: both;
+    background-color: #bb9e9e;
+    color: white;
+    text-align: left;
+    padding: 1em;
+}
+
+footer img{
+    float: left;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+}

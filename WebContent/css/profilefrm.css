@@ -1,0 +1,37 @@
+@charset "EUC-KR";
+
+.container{
+	border: 1px solid black;
+	text-align: left;
+	margin-top: 30px;
+	width: 800px;
+	height: 500px;
+	
+}
+
+.profileimg{
+	border: 3px solid lightgray;
+	width: 300px;
+	height: 200px;
+	text-align: center;
+	margin-left: 1px;
+	float: left;
+}
+
+.profbtn input{
+	width: 300px;
+	height: 30px;
+}
+
+.profbtn{
+	margin-left: 1px;
+	float: left;
+}
+
+.prfcon{
+	border: 3px solid lightgray;
+	width: 400px;
+	height: 200px;
+	float: right;
+	margin-right: 1px;
+}

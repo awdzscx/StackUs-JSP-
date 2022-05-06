@@ -1,0 +1,180 @@
+@charset "EUC-KR";
+
+*{
+    margin: 0; 
+    padding: 0;
+}
+ 
+/* 화면에 너무 붙어 있어서...  */
+body{
+    padding: 30px;
+    background-color: white;
+}
+ 
+header{ 
+    padding: 5px;
+    text-align: center;
+}
+
+header p{
+    float: right;
+}
+
+header h4{float: right;}
+
+header a{text-decoration: none; color: #333333;}
+
+
+/* 아이디/비밀번호 찾기 영역 */
+
+.container{
+	border: 1px solid;
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	margin-bottom: 60px;
+	
+}
+
+.found-id{
+	font-size: 25px;
+	font-weight: strong;
+}
+
+.find-name{
+	padding: 10px;
+	text-align: left;
+	margin-left: 33px;
+}
+
+.find-id{
+	padding: 10px;
+	text-align: left;
+	margin-left: 53px;
+}
+
+.find_email{
+	padding: 10px;
+	text-align: left;
+	margin-left: 20px;
+}
+
+.found-fail{
+	margin-top: 20px;
+}
+
+.profile{
+	border: 1px solid;
+	text-align: left;
+}
+
+/* MyAccount 영역  */
+
+
+.SideBar{
+	float: left;
+	border-left: 0.5px solid red;
+	border-right: 0.5px solid red;
+	margin-left: 60px;
+	margin-bottom: 30px;
+	width: 200px;
+	height: 600px;
+}
+
+.mypage{
+	text-align: center;
+	font-size: 25px;
+	margin-left: 20px;
+	font-weight: bold;
+	height: 40px;
+}
+
+.SBcon{
+	text-align: center;
+	margin-bottom: 5px;
+	height: 40px;
+}
+.SideBar a{
+	text-decoration: none;
+	color: black;
+}
+
+/* 학생?선생?  */
+.studento{
+	width: 350px;
+	height: 300px;
+	border: 1px solid black;
+	float: left;
+	margin-top: 60px;
+	margin-left: 200px;
+	border-radius: 20px 20px;
+}
+
+.teachero{
+	width: 350px;
+	height: 300px;
+	border: 1px solid black;
+	float: right;
+	margin-top: 60px;
+	margin-right: 200px;
+	border-radius: 20px 20px;
+	margin-bottom: 100px;
+}
+
+.studento h1, .teachero h1{
+	margin: 15px;
+}
+
+.studento a, .teachero a{
+	text-decoration: none; color: #333333;
+}
+
+
+
+
+/* nav 영역  */
+nav{margin-top: 10px; margin-bottom: 30px;}
+ 
+nav ul{
+    list-style: none;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    text-align: center;
+}
+ 
+nav ul li{
+    display: inline;
+    letter-spacing: .5em;
+    margin-left: 3em;
+}
+ 
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    line-height: 3em;
+    text-transform: uppercase;
+}
+ 
+nav ul li a:hover{ text-decoration: underline;}
+ 
+aside#main{
+    float: left;
+}
+
+footer{
+    clear: both;
+    background-color: #bb9e9e;
+    color: white;
+    text-align: left;
+    padding: 1em;
+}
+
+footer img{
+    float: left;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+}
+ 
